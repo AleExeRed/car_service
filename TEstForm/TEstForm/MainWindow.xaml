@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:TEstForm"
         mc:Ignorable="d"
         Title="Поликлиника" Height="450" Width="800">
-    <Grid>
-    
+    <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="*, *, *" >
+        <Label Content="Simple text" FontSize="24" Grid.Row="0" Grid.Column="0"/>
+        <Button x:Name="AddAppointment" Content="Добавить запись" Grid.Row="2" Grid.Column="2"/>
+        <DataGrid Grid.Row="1" Grid.Column="0" d:ItemsSource="{d:SampleData ItemCount=5}" Grid.ColumnSpan="3"/>
     </Grid>
 </Window>
